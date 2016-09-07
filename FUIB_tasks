@@ -1,0 +1,129 @@
+setTimeout(function(){
+       setOperatorName("Василий Вася Васивививич")
+    }, 5000);
+    function setOperatorName(name) {
+        alert($('div.kons-name').text());
+    }
+    $('.chat-win :button').attr("type", "button");
+    $('.chat-win textarea').keyup(function (event) {
+        if (event.keyCode == 13) {
+            $('.chat-win :button').click();
+        }
+    });
+    $('.chat-win :button').click(function(){
+        var text =  $(' .chat-win textarea').val();
+        $('.chat-win textarea').val('');
+        alert(text);
+//        try {
+//            api.sendMessage(text);
+//        } catch (ex) {
+//            alert(ex);
+//        }
+        $('div.kons-name').text()
+        addChatMsg('CLIENT', getCurrentDate(), text);
+    });
+    function endChat() {
+        $('#messages_container').empty();
+        setDialogState('CLOSED');
+        $('#fuib_chat').hide();
+        return false;
+    }
+    function setDialogState(state, info) {
+        switch (state) {
+            case 'READY':
+                $('#messages_container').empty();
+            case 'CLOSED':
+                setOperatorName('Для связи с оператором отправьте сообщение');
+                break;
+            case 'OPENED':
+            case 'CONNECTED':
+                if (info !== undefined) {
+                    setOperatorName(info)
+                }
+                break;
+        }
+    }
+
+
+    function getCurrentDate(){
+        var datetime = new Date();
+        var m = datetime.getMonth() + 1;
+        var d = datetime.getDate();
+        var h = datetime.getHours();
+        var mm = datetime.getMinutes();
+        var s = datetime.getSeconds();
+        return datetime.getFullYear() + '.' + (m < 10 ? '0' + m : m) + '.' + (d < 10 ? '0' + d : d) +
+            ' ' + (h < 10 ? '0' + h : h) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (s < 10 ? '0' + s : s);
+    }
+    var author_types = {
+        'OPERATOR': 'Оператор',
+        'CLIENT': 'Клиент',
+        'SYSTEM': 'Системное сообщение'
+    };
+
+    function addChatMsg(type, time, text) {
+        var newMsg;
+        if(type === 'OPERATOR'){
+            newMsg = '<div class="row konsult"> \
+                        <div class="col-md-8 name-col">' + author_types[type] + '</div> \
+                            <div class="col-md-4 time-col">' + time + '</div> \
+                            <div class="msg-kons col-md-12"> \
+                                <p> \
+                                    ' + text + '  \
+                                </p> \
+                            </div> \
+                        </div>';
+        } else if (type === 'CLIENT') {
+            newMsg = '<div class="row klient">\
+                        <div class="col-md-2 time-col">' + time + '</div>\
+                        <div class="col-md-10 name-col">' + author_types[type] + '</div>\
+                        <div class="msg-klient col-md-11">\
+                            <p> \
+                            ' + text + '\
+                            </p>\
+                        </div>\
+                      </div>'
+        }
+        var container = $('#chat-text-area-id');
+        container.append(newMsg);
+        $('#chat-text-area-id').animate({ scrollTop: $('#chat-text-area-id').last().offset().left }, 200);
+    }
+
+ <div class="chat-win">
+        <form>
+            <div class="top-panel">
+                <div class="description">Допомога онлайн</div>
+                <div class="close-btn"><a href="#">&#x274C;</a></div>
+                <div class="minimaze-btn"><a href="#"></a></div>
+                <div class="kons-name">111</div>
+            </div>
+            <div id = "chat-text-area-id" class="txt-area">
+                <div class="row konsult">
+                    <div class="col-md-8 name-col">Консультант Ірина</div>
+                    <div class="col-md-4 time-col">20:34:32</div>
+                    <div class="msg-kons col-md-12">
+                        <p>
+                            Pleasure and I will give you a system.
+                        </p>
+                    </div>
+                </div>
+                <div class="row klient">
+                    <div class="col-md-2 time-col">2016.09.06 18:00:58</div>
+                    <div class="col-md-10 name-col">Клієнт</div>
+                    <div class="msg-klient col-md-11">
+                        <p>But I must explain to you how all this mistaken</p>
+                    </div>
+                </div>
+                <div class="row konsult">
+                    <div class="col-md-8 name-col">Консультант Ірина</div>
+                    <div class="col-md-4 time-col">20:34</div>
+                    <div class="msg-kons col-md-12">
+                        <p>
+                            Must explain to you how
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <textarea placeholder="Введіть повідомлення"></textarea>
+            <button type="submit">Відправити</button>
+        </form>
