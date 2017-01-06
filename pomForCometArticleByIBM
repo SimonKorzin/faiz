@@ -1,0 +1,58 @@
+cometArticleByIBM
+
+    <groupId>samples</groupId>
+    <artifactId>comet-examples</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>comet examples application</name>
+
+    <modules>
+        <module>comet-long-polling</module>
+        <module>comet-streaming</module>
+        <module>piggyback</module>
+        <module>polling</module>
+    </modules>
+
+1) comet-long-polling
+ <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>samples</groupId>
+        <artifactId>comet-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>war_long-polling</artifactId>
+    <packaging>war</packaging>
+
+2) comet-streaming
+<parent>
+        <groupId>samples</groupId>
+        <artifactId>comet-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>war_streaming</artifactId>
+    <packaging>war</packaging>
+
+3) piggyback
+
+  <parent>
+        <groupId>samples</groupId>
+        <artifactId>comet-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>war_piggyback</artifactId>
+    <packaging>war</packaging>
+4) polling
+
+ <parent>
+        <groupId>samples</groupId>
+        <artifactId>comet-examples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>war_polling</artifactId>
+    <packaging>war</packaging>
