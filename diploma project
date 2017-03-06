@@ -1,3 +1,10 @@
 * architecture
 - Microservices
+    + Martin Fauler articles (Microservices / Patterns / Consepts)
+      & https://martinfowler.com/articles/consumerDrivenContracts.html
+      & https://martinfowler.com/bliki/TolerantReader.html
+      & https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html
+      & https://martinfowler.com/bliki/PolyglotPersistence.html
+      & https://martinfowler.com/bliki/ContinuousDelivery.html
+    + 
 - Integration / ESB
