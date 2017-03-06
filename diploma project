@@ -6,5 +6,10 @@
       & https://martinfowler.com/bliki/ServiceOrientedAmbiguity.html
       & https://martinfowler.com/bliki/PolyglotPersistence.html
       & https://martinfowler.com/bliki/ContinuousDelivery.html
-    + 
+    + articles
+      & https://dzone.com/articles/microservice-architecture-with-spring-cloud-and-do
+      & https://dzone.com/articles/deploying-microservices-spring-cloud-vs-kubernetes
+      & 
+    + movie
+      & https://www.youtube.com/watch?v=Bcs-inRnLDc посмотреть, а как посмотрел, смотри эту надпись ублюдок
 - Integration / ESB
