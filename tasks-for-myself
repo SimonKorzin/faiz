@@ -1,0 +1,9 @@
+1. 
+    1) Write echo websocket using Akka Actors
+    2) Test in web browser
+    3) Write non-so-stringly-typed websocket
+    4) Test in web browser
+    5) Write proper types for task
+    6) Inplement OG fetching
+    7) (For brave & anbitious) inplement caching.
+    
