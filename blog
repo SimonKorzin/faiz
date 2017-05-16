@@ -2,3 +2,4 @@
 Ideas for articles:
 * Comparing API and Functionality of Hazelcast and Terracotta
 * Workarounds: Intercept methods calls of @EJB bean injected using RMI.
+* Compare Postgres noSQL and Mongo DB. (quary, functionality, speed, scalability, transactions(+ levels))  
