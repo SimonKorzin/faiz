@@ -4,4 +4,4 @@ Ideas for articles:
 * Workarounds: Intercept methods calls of @EJB bean injected using RMI.
 * Compare Postgres noSQL and Mongo DB. (quary, functionality, speed, scalability, transactions(+ levels))  
 * Sessions in cluster environment(AS clustering, containers, connection between them, JVM tool as Spring Sessions, and tools in Python,Ruby,Node.js)
-* Complex method project OOP structure. Class per Method.(extend method, utils, whereIAm, and features such as that). Different variations.
+* Complex method project OOP structure. Class per Method.(extend method, utils, whereIAm, and features such as that). Different variations. FUIB projects such as IB2, ibanking can help me. Plus, don't forget about Spring and it's patterns, and even better to find sth about that in any Spring patterns book.
